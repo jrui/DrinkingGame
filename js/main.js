@@ -1,9 +1,26 @@
 var playerCount = 0
 var players = []
+var currentPlayer = 0
+
+
+function changeCard() {
+  let card = Math.floor(Math.random() * cards.length)
+
+  document.getElementById("userId").innerHTML = `${players[currentPlayer]}, it's your round!`
+  document.getElementById("cardName").innerHTML = `Card name: ${cards[card].title}`
+  document.getElementById("cardValue").innerHTML = `${cards[card].description}`
+
+  currentPlayer += 1
+  currentPlayer %= playerCount
+}
+
 
 function startGame(pIn) {
   pIn.forEach(p => players.push(p))
   console.log("Registered players:", players)
+
+  document.getElementById("userId").innerHTML = `${players[currentPlayer]}, it's your round!`
+  changeCard()
 }
 
 

@@ -10,23 +10,35 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <link href="style/main.css" type="text/css" rel="stylesheet"/>
+    <script src="js/cards.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body class="background">
-    <div class="title_div">
-      <p>Drinking Game</p>
-      <script type="text/javascript"> addNewPlayer() </script>
-      <hr style="-webkit-margin-top-collapse:discard">
-    </div>
+    <div>
+      <div class="title_div">
+        <p class="title">Drinking Game</p>
+        <script type="text/javascript"> addNewPlayer() </script>
+        <hr style="-webkit-margin-top-collapse:discard;border-top:ridge">
+      </div>
 
+      <div class="user_div">
+        <h2 id="userId"></h2>
+      </div>
 
-    <div class="w3-container board_background">
-      <p id="playerTurn">Player 1</p>
-    </div>
+      <table class="table_board" onclick="changeCard()">
+        <thead>
+          <tr>
+            <th id="cardName"></th>
+          </tr>
+        </thead>
+        <tr>
+          <td id="cardValue"></td>
+        </tr>
+      </table>
 
-
-    <div class="footer_div w3-panel w3-blue w3-card-4">
-      <p>For more information contact <a href="https://jrsmiguel.me">CaptainJRoy</a></p>
+      <div class="footer_div w3-panel w3-blue w3-card-4">
+        <p>For more information contact <a href="https://jrsmiguel.me">CaptainJRoy</a></p>
+      </div>
     </div>
   </body>
 </html>

@@ -6,8 +6,19 @@
 }
 
 
-.board_background {
-  background-color: #0FF;
+.table_board {
+  width: 100%;
+  display: table;
+}
+.cardName {
+  font-size: 30pt;
+  color: #FFF;
+}
+
+
+.user_div {
+  background-color: #066;
+  -webkit-margin-before-collapse: discard;
 }
 
 
@@ -15,6 +26,11 @@
   font-size: 50pt;
   color: #FFF;
   font-family: "Allerta Stencil", Sans-serif;
+}
+.title {
+  display: flex;
+  place-content: center;
+  margin-block-end: auto;
 }
 
 

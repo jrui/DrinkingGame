@@ -1,9 +1,9 @@
-var playerCountIntent = 0
-var players = 0
-var playersUser = []
+var playerCount = 0
+var players = []
 
-function startGame() {
-  confirm('Not Implemented!')
+function startGame(pIn) {
+  pIn.forEach(p => players.push(p))
+  console.log("Registered players:", players)
 }
 
 
@@ -14,9 +14,15 @@ function addNewPlayer() {
     showCancelButton: false,
     confirmButtonText: 'Continue',
     preConfirm: n => {
-      playerCountIntent = parseInt(n)
-      if (!isNumeric(playerCountIntent)) playerCountIntent = 1
-      console.log(`Added intent for ${playerCountIntent} players!`)
+      playerCount = parseInt(n)
+      if (!isNumeric(playerCount)) playerCount = 1
+      console.log(`Added intent for ${playerCount} players!`)
+    },
+    inputValidator: n => {
+      return new Promise(resolve => {
+        if (isNumeric(n)) resolve()
+        else resolve('You need to input a numeric value')
+      })
     },
     allowOutsideClick: false
   })
@@ -36,7 +42,7 @@ function addNewPlayer() {
           confirmButtonText : `Play!`,
           allowOutsideClick: false,
           showCancelButton: false,
-          preConfirm: _ => { startGame() }
+          preConfirm: _ => { startGame(pName.value) }
         })
       }
     })
@@ -46,7 +52,7 @@ function addNewPlayer() {
 
 function createPlayerTitle() {
   let arr = []
-  for (let i = 0; i < playerCountIntent; i++)
+  for (let i = 0; i < playerCount; i++)
     arr.push(`Name of player ${i+1}`)
 
   return arr

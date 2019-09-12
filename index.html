@@ -3,15 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Drinking Game</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <link href="style/main.css" type="text/css" rel="stylesheet"/>
     <script src="js/main.js"></script>
   </head>
-  <body class="bodyStyle">
-    <script type="text/javascript"> addNewPlayer() </script>
+  <body class="background">
+    <div class="title_div">
+      <p>Drinking Game</p>
+      <script type="text/javascript"> addNewPlayer() </script>
+      <hr style="-webkit-margin-top-collapse:discard">
+    </div>
 
-    <div id="contentContainer" class="contentContainer">
 
+    <div class="w3-container board_background">
+      <p id="playerTurn">Player 1</p>
+    </div>
+
+
+    <div class="footer_div w3-panel w3-blue w3-card-4">
+      <p>For more information contact <a href="https://jrsmiguel.me">CaptainJRoy</a></p>
     </div>
   </body>
 </html>

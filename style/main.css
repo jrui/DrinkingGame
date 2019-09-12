@@ -1,6 +1,27 @@
-.bodyStyle {
-  background: #333;
-  margin: auto;
-  padding: 0px;
+.background {
+  background-color: #333;
   text-align: center;
+  -webkit-margin-top-collapse: discard;
+  min-height: -webkit-fill-available;
+}
+
+
+.board_background {
+  background-color: #0FF;
+}
+
+
+.title_div {
+  font-size: 50pt;
+  color: #FFF;
+  font-family: "Allerta Stencil", Sans-serif;
+}
+
+
+.footer_div {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin-bottom: 0px;
+  padding: 0px;
 }
